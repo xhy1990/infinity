@@ -9,4 +9,13 @@
     <artifactId>xx-common</artifactId>
     <version>1.0.0</version>
     <name>xx-common</name>
+
+    <dependencies>
+        <!--netty-->
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
+        </dependency>
+    </dependencies>
+
 </project>
