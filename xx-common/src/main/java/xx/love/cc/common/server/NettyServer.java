@@ -7,12 +7,14 @@ import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.handler.logging.LogLevel;
 import io.netty.handler.logging.LoggingHandler;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * @Description
  * @Author xhy
  * @Date 2024/3/2
  */
+@Slf4j
 public class NettyServer {
 
     private ServerBootstrap serverBootstrap;
@@ -45,7 +47,7 @@ public class NettyServer {
             ChannelFuture serverChannelFuture = serverBootstrap.bind(this.port).sync();
             serverChannelFuture.channel().closeFuture().addListener(ChannelFutureListener.CLOSE);
         } catch (Exception e) {
-            System.out.println("netty启动失败 " + e);
+            log.error("netty启动失败", e);
         }
 
     }

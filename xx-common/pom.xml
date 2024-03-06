@@ -11,6 +11,7 @@
     <name>xx-common</name>
 
     <dependencies>
+
         <!--netty-->
         <dependency>
             <groupId>io.netty</groupId>
